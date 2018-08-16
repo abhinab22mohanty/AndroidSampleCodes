@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="392dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TabHost
+            android:id="@+id/tabHost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/tabStorage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtCntctList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Contact List"
+                            android:textSize="25dp"
+                            tools:layout_editor_absoluteX="138dp"
+                            tools:layout_editor_absoluteY="70dp" />
+
+                        <ListView
+                            android:id="@+id/listView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tabCreator"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/lblName"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:ems="10"
+                            android:hint="Name"
+                            android:inputType="textPersonName"
+                            tools:layout_editor_absoluteX="10dp"
+                            tools:layout_editor_absoluteY="78dp" />
+
+                        <EditText
+                            android:id="@+id/lblPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="57dp"
+                            android:ems="10"
+                            android:hint="Contact Number"
+                            android:inputType="phone"
+                            tools:layout_editor_absoluteX="10dp"
+                            tools:layout_editor_absoluteY="141dp" />
+
+                        <EditText
+                            android:id="@+id/lblemail"
+                            android:layout_width="match_parent"
+                            android:layout_height="58dp"
+                            android:ems="10"
+                            android:hint="id@gmail.com"
+                            android:inputType="textEmailAddress"
+                            tools:layout_editor_absoluteX="9dp"
+                            tools:layout_editor_absoluteY="207dp" />
+
+                        <EditText
+                            android:id="@+id/lblAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="59dp"
+                            android:ems="10"
+                            android:hint="Postal Address"
+                            android:inputType="textPostalAddress"
+                            tools:layout_editor_absoluteX="8dp"
+                            tools:layout_editor_absoluteY="275dp" />
+
+                        <Button
+                            android:id="@+id/btnContact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:text="Add Contact" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
